@@ -1,0 +1,23 @@
+{
+  "name": "karma-jasmine-testing",
+  "version": "0.0.1",
+  "description": "A sample karma-jasmine execution project",
+  "author": "Mart Köhler <mart.koehler@openknowledge.de>",
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "dependencies": {
+    "angular": "^1.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.5"
+  },
+  "private": true,
+  "analyze": true,
+  "license": "MIT"
+}
