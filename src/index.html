@@ -1,20 +1,21 @@
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="https://raw.githubusercontent.com/craftpip/jquery-confirm/v1.7.8/dist/jquery-confirm.min.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
 <script src="https://raw.githubusercontent.com/craftpip/jquery-confirm/v1.7.8/dist/jquery-confirm.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
-<script src="./customerAdministration.module.js"></script>
-<script src="./crm.module.js"></script>
-<script src="./confirm.js"></script>
-<script src="./customerService.js"></script>
-<script src="./customerController.js"></script>
-<script src="./myValues.js"></script>
+<script src="./customer-administration/customer-administration.module.js"></script>
+<script src="./app.module.js"></script>
+<script src="./confirm-dialog.directive.js"></script>
+<script src="./customer-administration/customer.service.js"></script>
+<script src="./customer-administration/customer.controller.js"></script>
+<script src="./my-values.js"></script>
 
 </head>
-<body ng-app="crm">
-<div ng-controller="CustomerController as customers">
+<body ng-app="app">
+<div ng-controller="customerController as customers">
 
   <div>
   <form name="form" novalidate class="css-form">
@@ -40,7 +41,7 @@
       <td>{{user.username}}</td>
       <td>{{user.email}}</td>
       <td>
-      <confirm call="customers.removeUser(user)" title="wirklich löschen?" content="wirklich löschen?"></confirm>
+      <confirm-dialog call="customers.removeUser(user)" title="wirklich löschen?" content="wirklich löschen?"></confirm-dialog>
         <button ng-click="customers.removeUser(user)">Benutzer entfernen</button>
       </td>
     </tr>

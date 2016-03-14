@@ -1,11 +1,11 @@
 
 (function(configureDirective) {
-  configureDirective('confirm',confirm);
+  configureDirective('confirmDialog',confirm);
 
   function confirm() {
     return {
       restrict: 'E',
-      template: '<button type="button" class="close" aria-label="Close" ng-click="confirm()"> <span class = "glyphicon glyphicon-remove-circle"> </span> </button>',
+      templateUrl: 'confirm-dialog.template.html',
       scope: {
         call: '&',
         title: '@',
@@ -33,4 +33,4 @@
     };
 
   }
-})(angular.module('customerAdministration').directive);
+})(angular.module('app').directive);

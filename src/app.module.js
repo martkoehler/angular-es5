@@ -1,5 +1,5 @@
 // main app module with additional configuration
-angular.module('crm', ['customerAdministration'])
+angular.module('app', ['customerAdministration'])
   .config(function(customerServiceProvider) {
     var customers = [{
       username: 'Mart Köhler',

@@ -13,4 +13,4 @@
     }
   }
 
-})(angular.module('customerAdministration').factory);
+})(angular.module('app').factory);

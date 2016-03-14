@@ -1,15 +1,17 @@
 // customer controller
 (function(configureCustomerController) {
-  configureCustomerController('CustomerController', ctrl);
+  configureCustomerController('customerController', ctrl);
 
   ctrl.$inject = ['myValues', 'customerService'];
 
   function ctrl(myValues, customerService) {
     var that = this;
+
     that.name = myValues.hero();
     refresh();
     that.addUser = function() {
       customerService.addUser(that.username, that.email);
+      console.log(customerService);
       clearInput();
       refresh();
     };
